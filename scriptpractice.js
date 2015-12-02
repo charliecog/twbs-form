@@ -18,7 +18,7 @@ $(function() {
 
 })
 
-*/
+
 
 $(function() {
 
@@ -76,3 +76,18 @@ $(function() {
 
 })
 
+ */
+
+
+$(function() {
+
+    $('#form').submit(function() {
+        $('.form-group').each(function () {
+            console.log($(this).find('input'));
+        })
+        return false;
+    })
+
+
+
+})
