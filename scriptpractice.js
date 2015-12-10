@@ -1,4 +1,4 @@
-/*
+
     //document.getElementsByClassName('form-group')[0].innerHTML = "hahahahahahaha"
     $('.form-group').html("hahahahaha")
 
@@ -14,7 +14,7 @@
 
 $(function() {
 
-    $('.form-group,.radio').not('#button').append("<p>a new pokemon has appeared</p>")
+    //$('.form-group,.radio').not('#button').append("<p>a new pokemon has appeared</p>")
 
 })
 
@@ -33,6 +33,18 @@ $(function() {
         $('#notRequired').trigger('focus')
         return false;
     })
+
+    $( "#button" ).hover(function() {
+        $( "#button" ).fadeOut( "fast", function() {
+            $('.form-group').load('oldlady.html')
+        });
+    });
+
+    $( "#oldlady" ).hover(function() {
+        $( "#oldlady" ).fadeOut( "fast", function() {
+            $('#oldlady').load('index.html')
+        });
+    });
 
     $('#requiredField').blur(function() {
         var requiredField = $('#requiredField').val()
@@ -76,7 +88,7 @@ $(function() {
 
 })
 
- */
+
 
 
 $(function() {
@@ -88,6 +100,6 @@ $(function() {
         return false;
     })
 
-
+    $('.load').load('index.html #optional')
 
 })
